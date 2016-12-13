@@ -39,8 +39,10 @@ a.hamburger {
 @media (min-width: 426px) and (max-width: 789px) {
 	.header a {
 		padding: 10px 10px;
+		border: 1px solid blue;
 	}
 }
+
 @media (max-width: 425px) {
 	a.hamburger {
 		display: block;
