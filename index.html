@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Villa Ruandra</title>
+	<link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/bootstrap-theme.css">
+	<link rel="stylesheet" href="assets/css/unslider.css">
+	<link rel="stylesheet" href="assets/css/style.css" media="screen" />
+	<link rel="stylesheet" href="assets/css/lightbox.css" media="screen" />
+	<link rel="stylesheet" href="assets/css/themes/default/default.css" media="screen" />
+
+	 <style>
+		#map {
+			height: 900px;
+			width: 100%;
+		}
+	</style>
+
+</head>
+<body>
+<div id="app">
+
+<a href="javascript:;" id="menu" class="hamburger"></a>
+	
+	<div class="header">
+		<a :href="link.url" v-for="link in links">{{ link.name }}</a>
+	</div>
+
+	<div class="my-slider">
+		<ul>
+			<li><img src="assets/images/slideshow/villa1.jpg" class="responsif"></li>
+			<li><img src="assets/images/slideshow/villa2.jpg" class="responsif"></li>
+		</ul>
+	</div>
+		
+	<div class="space" name="welcome" id="welcome">
+		<div class="container">
+			<div class="row">
+
+				<div class="col-xs-12 col-md-6">
+					<div class="content">
+						<h1>WELCOME TO VILLA RUANDRA</h1>
+						<br>
+						<p>Villa RUANDRA is a modern two bedroom style luxurious villa pamper you with it's contemporary stylish architecture and exclusive furniture. All furniture from solid teakwood and natural finishing all in all, the perfect collaboration between modern villa and natural modern furniture gives tropical atmosphere </p><br>
+						<p>Only 5 minutes drive to Seminyak, Villa Ruandra will guide you to magnificent wonder of nature Petitenget's best dining, shopping, and beach are with only short walk. Almost all people around the world know that Seminyak is one of the best spot in Bali, and Petitenget is the developing area in Bali with sophisticated things after Seminyak</p><br>
+					</div>
+				</div>
+					
+				<div class="col-xs-12 col-md-6">
+					<div class="picture">
+						<img src="assets/images/slideshow/1.jpg" class="responsive">
+					</div>
+				</div>
+
+			</div>			
+		</div>
+	</div>
+	<img src="assets/images/slideshow/menu-1.jpg" class="responsive">
+	<div class="space" id="accommodation">
+		<div class="container">
+			<div class="row">
+
+				<div class="col-xs-12 col-md-6">
+					<div class="content">
+						<h1>ACCOMMODATION</h1>
+						<br>
+						<p>Offering complete accommodation start from bedroom up to the outdoor simplicity, Villa Ruandra is ready to pamper guest with all holiday makers need during their holiday.</p>
+						<p>Bedrooms, Bathrooms, Tropical living area including pool, Dining area, Kitchen and mini tropical garden are well equipped and beautified with elegant style and luxury</p>
+						<br>
+					</div>
+				</div>
+					
+				<div class="col-xs-12 col-md-6">
+					<div class="picture">
+						<img src="assets/images/slideshow/1.jpg" class="responsive">
+					</div>
+				</div>
+
+			</div>
+		</div>	
+	</div>
+	<img src="assets/images/slideshow/menu-1.jpg" class="responsif">
+	<div class="space" style="background-color: #f5f5f5" id="villa">
+		<div class="container">
+			<div class="row">
+
+				<template v-for="(text, i) in texts">
+					<div class="col-xs-12 col-md-6">
+						<div class="content">
+							<h1>{{ text.title }}</h1><br>
+							<p>{{ text.body }}</p>
+							<br>
+						</div>
+					</div>
+
+					<template v-if="isEven(i)">
+						</div><div class="row">
+					</template>
+				</template>
+
+			</div>
+		</div>	
+	</div>
+
+	<div class="space" id="gallery">
+		<div class="container">
+			<div class="row">
+				<template v-for="picture in gallery">
+					<div class="col-xs-12 col-md-3">
+						<div class="picture">
+							<a :href="`assets/images/gallery/${picture}.jpg`" rel="lightbox"><img :src="`assets/images/thumbnails/${picture}.jpg`" class="responsive"><a>
+						</div>
+					</div>
+				</template> 
+
+			</div>			
+		</div>
+	</div>
+
+
+	<div class="row no-padding fullh" id="rates">
+		<div class="col-xs-12 col-md-4 fullh">
+			<div class="rates" style="background: transparent url('/newvilla/assets/images/slideshow/long-1.jpg') no-repeat center center;">
+				<h1>LOW SEASON</h1>
+				<p style="font-size: 28px;">3.250.000 IDR</p>
+				<p>06 January - 30 June</p>
+				<p>01 September - 19 December</p>
+			</div>
+		</div>
+
+		<div class="col-xs-12 col-md-4 fullh">
+			<div class="rates" style="background: transparent url('/newvilla/assets/images/slideshow/long-2.jpg') no-repeat center center;">
+				<h1 id="rates">HIGH SEASON</h1>
+				<p style="font-size: 28px;">3.900.000 IDR</p>
+				<p>01 July - 31 August</p>
+			</div>
+		</div>
+
+		<div class="col-xs-12 col-md-4 fullh">
+			<div class="rates" style="background: transparent url('/newvilla/assets/images/slideshow/long-1.jpg') no-repeat center center;">
+				<h1>PEAK SEASON</h1>
+				<p style="font-size: 28px;">4.600.000 IDR</p>
+				<p>20 December - 05 January</p>
+			</div>
+		</div>
+	</div>
+	<br class="cleaner">
+
+	<div class="space" id="villa">
+		<div class="container">
+			<div class="row">
+
+				<div class="col-xs-12 col-md-6">
+					<div class="services">
+						<h1>SERVICES</h1>
+						<br>
+						<p>Welcome drink</p> 
+						<p>chilled towel</p> 
+						<p>housekeeper</p> 
+						<p>pool attendant</p> 
+						<P>gardener</p> 
+						<p>free wi-fi</p> 
+						<p>free check in towels and bathroom amenities for guest</p>
+						<p>Including continental breakfast</p>
+						<p>Extra bed based on request and extra charge</p>
+					</div>
+				</div>
+					
+				<div class="col-xs-12 col-md-6">
+					<div class="picture">
+						<img src="assets/images/slideshow/1.jpg" class="responsive">
+					</div>
+				</div>
+
+			</div>
+			<br><br>
+			<div class="row">
+			
+				<div class="col-xs-12 col-md-6">
+					<div class="services">
+						<h1 name="welcome" id="welcome">FACILITIES</h1>
+						<br>
+						<p>One private swimming pool</p>
+						<p>One big balcony</p>
+						<p>Full air conditioned bedrooms</p>
+						<p>En suite bathrooms with closet, shower and hand wash basin <br>(Bathtub is available in master bedroom)</p>
+						<p>LCD Tv in living area with satellite Tv and stereo system</p>
+						<p>LCD Tv in each room with satellite Tv and DVD Player</p>
+						<p>Safety deposit box in each bedroom</p>
+						<p>Fully equipped kitchen including gas hob, refrigerator, microwave, <br>water dispenser, oven, cooking utensils, etc</p>
+						<p>Local telephone is available in living room</p>
+						<p>* Parking space for 1 car and motorbike</p>
+						<p>* Wash machine (dry area) storage</p><br>
+					</div>
+				</div>
+					
+				<div class="col-xs-12 col-md-6">
+					<div class="picture">
+						<img src="assets/images/slideshow/pool.jpg" class="responsive">
+					</div>
+				</div>
+
+			</div>	
+
+		</div>
+	</div>
+
+	<br class="cleaner">
+	<div class="space">
+		<div class="row no no-padding fullh">
+			
+			<div class="col-xs-12 col-md-6 fullh">
+				<div id="map"></div>
+			</div>
+			
+			<div class="col-xs-12 col-md-6 fullh">
+				<div class="contact">
+					
+					<h1>VILLA RUANDRA</h1>
+					<p>ADDRESS : jl. Petitenget street Gg Orchid no 9</p>
+					<p>Phone : (+62)361 742 1543</p>
+					<p>Mobile : (+62)81 139 8259</p>
+					<p>Email : villaruandra@gmail.com</p>
+				</div>
+			</div>
+		
+		</div>
+	</div>
+
+	<div class="footer">copyright Villa Ruandra 2012</div>
+</div>
+	
+<script type="text/javascript" src="assets/js/vue@2.0.5.js"></script>
+<script type="text/javascript" src="assets/js/jquery-1.7.min.js"></script>
+<script src="assets/js/unslider-min.js"></script>
+<script type="text/javascript" src="assets/js/vue.js"></script>
+<script type="text/javascript" src="assets/js/jquery.lightbox-0.5.js"></script>
+
+
+<script type="text/javascript">
+	$(function() {
+		// Use this example, or...
+		$('a[rel=lightbox]').lightBox(); // Select all links that contains lightbox in the attribute rel
+	});
+</script>
+
+<script>
+	function initMap () {
+		var uluru = {lat: -25.22, lng: 131.044};
+		var map = new google.maps.Map(document.getElementById('map'), {
+			zoom: 4,
+			center: uluru,
+			map: map
+		});
+		var marker = new google.maps.Marker ({
+			position: uluru,
+			map: map,
+		});
+	}
+</script>
+
+<script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAjWV-KmorM9119GKLINwNo5h3qda5Uolk&callback=initMap">
+    </script>
+
+</body>
+</html>
