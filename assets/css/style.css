@@ -47,7 +47,7 @@ a.hamburger {
 	a.hamburger {
 		display: block;
 		padding: 20px 25px;
-		background: rgba(255,255,255,0.7) url('/newvilla/assets/images/slideshow/button.png') no-repeat center center;
+		background: rgba(255,255,255,0.7) url('../images/slideshow/button.png') no-repeat center center;
 	}
 	.header {
 		left: -100%;
@@ -65,6 +65,9 @@ a.hamburger {
 	}
 	.header a {
 		padding: 10px 0;
+	}
+	.space {
+		padding: 20px 0;
 	}
 }
 
