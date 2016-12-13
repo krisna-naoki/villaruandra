@@ -33,7 +33,7 @@ new Vue ({
 					url: '#services-and-facilities'
 				},{
 					name: 'CONTACT',
-					url: 'contact.html'
+					url: '#contact'
 				},
 			],
 
