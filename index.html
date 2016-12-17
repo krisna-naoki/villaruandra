@@ -30,11 +30,14 @@
 		<a :href="link.url" v-for="link in links">{{ link.name }}</a>
 	</div>
 
-	<div class="my-slider" id="welcome">
-		<ul>
-			<li><img src="assets/images/slideshow/villa1.jpg" class="responsif"></li>
-			<li><img src="assets/images/slideshow/villa2.jpg" class="responsif"></li>
-		</ul>
+	<div class="logo">
+		<div class="logo-image"><img src="assets/images/slideshow/logo.png"></div>
+		<div class="my-slider" id="welcome">
+			<ul>
+				<li><img src="assets/images/slideshow/villa1.jpg" class="responsif"></li>
+				<li><img src="assets/images/slideshow/villa2.jpg" class="responsif"></li>
+			</ul>
+		</div>
 	</div>
 		
 	<div class="space">
@@ -250,9 +253,9 @@
 
 <script>
 	function initMap () {
-		var uluru = {lat: -25.22, lng: 131.044};
+		var uluru = {lat: -8.6727791, lng: 115.1630758};
 		var map = new google.maps.Map(document.getElementById('map'), {
-			zoom: 4,
+			zoom: 17,
 			center: uluru,
 			map: map
 		});
